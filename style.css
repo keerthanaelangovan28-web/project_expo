@@ -1364,6 +1364,7 @@ img {
   padding: 40px;
   text-align: center;
   transition: var(--transition);
+  overflow: hidden;
 }
 
 .prize-dept {
@@ -2059,6 +2060,46 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .prize-card {
+    padding: 28px 16px;
+  }
+
+  .prize-podium {
+    gap: 8px;
+  }
+
+  .podium-item {
+    padding: 14px 8px;
+  }
+
+  .podium-trophy {
+    width: 44px;
+    height: 44px;
+  }
+
+  .podium-trophy-lg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .podium-label {
+    font-size: 0.78rem;
+  }
+
+  .podium-rank {
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-date-badge {
+    padding: 10px 18px;
+    gap: 10px;
+  }
+
+  .date-full {
+    font-size: 0.9rem;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -2120,6 +2161,61 @@ img {
   .prizes-tagline {
     letter-spacing: 5px;
     font-size: 1rem;
+  }
+
+  .prize-card {
+    padding: 22px 12px;
+  }
+
+  .prize-podium {
+    gap: 6px;
+  }
+
+  .podium-item {
+    padding: 10px 6px;
+    gap: 6px;
+  }
+
+  .podium-trophy {
+    width: 36px;
+    height: 36px;
+  }
+
+  .podium-trophy-lg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .podium-label {
+    font-size: 0.7rem;
+  }
+
+  .podium-rank {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+  }
+
+  .prize-card-title {
+    font-size: 1.1rem;
+  }
+
+  .prize-card-desc {
+    font-size: 0.8rem;
+  }
+
+  .hero-date-badge {
+    padding: 8px 14px;
+    gap: 8px;
+    border-radius: 12px;
+  }
+
+  .date-cal-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .date-full {
+    font-size: 0.82rem;
   }
 
   .coord-cards {
