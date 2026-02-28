@@ -23,7 +23,39 @@
   <nav id="navbar" class="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
-        <span class="logo-icon">⬡</span>
+        <span class="logo-icon"><svg viewBox="0 0 36 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2C15 2 12 6 11 12L7 16l-2 6 5 2c1 4 3 7 5 9l3 5 3-5c2-2 4-5 5-9l5-2-2-6-4-4C24 6 21 2 18 2z"
+              fill="url(#rk2Body)" stroke="url(#rk2Stroke)" stroke-width="1.3" />
+            <ellipse cx="18" cy="14" rx="3" ry="3.5" fill="rgba(0,229,255,0.3)" stroke="#00e5ff" stroke-width="1" />
+            <circle cx="18" cy="14" r="1.2" fill="#00e5ff" />
+            <path d="M11 20c-3 1.5-5 5-5 8l5-4z" fill="rgba(0,229,255,0.12)" stroke="#00e5ff" stroke-width="0.8"
+              stroke-linejoin="round" />
+            <path d="M25 20c3 1.5 5 5 5 8l-5-4z" fill="rgba(168,85,247,0.12)" stroke="#a855f7" stroke-width="0.8"
+              stroke-linejoin="round" />
+            <path d="M14 33l-3 10c0 0 3.5-3 7-3s7 3 7 3l-3-10" fill="url(#rk2Flame)" />
+            <path d="M16 33l-1.5 7c0 0 1.8-2 3.5-2s3.5 2 3.5 2l-1.5-7" fill="url(#rk2FlameIn)" />
+            <circle cx="18" cy="37" r="0.8" fill="#fff" opacity="0.8" />
+            <defs>
+              <linearGradient id="rk2Body" x1="10" y1="2" x2="26" y2="35">
+                <stop stop-color="#0c1a30" />
+                <stop offset="0.4" stop-color="#0e2d50" />
+                <stop offset="1" stop-color="#0c1a30" />
+              </linearGradient>
+              <linearGradient id="rk2Stroke" x1="10" y1="2" x2="26" y2="35">
+                <stop stop-color="#00e5ff" />
+                <stop offset="1" stop-color="#a855f7" />
+              </linearGradient>
+              <linearGradient id="rk2Flame" x1="18" y1="33" x2="18" y2="45">
+                <stop stop-color="#a855f7" />
+                <stop offset="0.4" stop-color="#00e5ff" />
+                <stop offset="1" stop-color="#00e5ff" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="rk2FlameIn" x1="18" y1="33" x2="18" y2="42">
+                <stop stop-color="#fff" stop-opacity="0.9" />
+                <stop offset="1" stop-color="#00e5ff" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+          </svg></span>
         <span class="logo-text">PROJECT EXPO <span class="logo-year">'26</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -64,8 +96,16 @@
     <div class="hero-orb hero-orb-3"></div>
     <div class="hero-content animate-on-scroll">
       <div class="hero-date-badge">
-        <span class="date-icon">📅</span>
-        <span>28th March 2026</span>
+        <div class="date-cal-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="24" height="21" rx="4" stroke="#00e5ff" stroke-width="1.5"
+              fill="rgba(0,229,255,0.06)" />
+            <path d="M2 12h24" stroke="#00e5ff" stroke-width="1" opacity="0.4" />
+            <path d="M8 2v6M20 2v6" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" />
+            <text x="14" y="22" text-anchor="middle" fill="#00e5ff" font-size="10" font-weight="800">28</text>
+          </svg>
+        </div>
+        <span class="date-full">March 28<sup>th</sup>, 2026</span>
       </div>
       <h1 class="hero-title">
         <span class="title-project">PROJECT</span>
@@ -131,56 +171,88 @@
       <div class="dept-grid" id="deptGrid">
         <!-- S&H -->
         <div class="dept-card animate-on-scroll" data-dept="sh">
-          <div class="dept-icon"><img src="/logos/sh.png" alt="S&H" class="dept-logo" /></div>
+          <div class="dept-icon">
+            <div class="dept-badge dept-green">
+              <div class="dept-svg-icon" id="dept-icon-sh"></div><span>S&H</span>
+            </div>
+          </div>
           <h3 class="dept-name">Science and Humanities (S&H)</h3>
           <p class="dept-coordinator">Coordinator: Dr. A. Touseef Ahmed</p>
           <button class="dept-btn" data-dept="sh">View Details</button>
         </div>
         <!-- CSE -->
         <div class="dept-card animate-on-scroll" data-dept="cse">
-          <div class="dept-icon"><img src="/logos/cse.png" alt="CSE" class="dept-logo" /></div>
+          <div class="dept-icon">
+            <div class="dept-badge dept-blue">
+              <div class="dept-svg-icon" id="dept-icon-cse"></div><span>CSE</span>
+            </div>
+          </div>
           <h3 class="dept-name">Computer Science and Engineering (CSE)</h3>
           <p class="dept-coordinator">Coordinator: Dr. Getsy S Sara</p>
           <button class="dept-btn" data-dept="cse">View Details</button>
         </div>
         <!-- CSBS -->
         <div class="dept-card animate-on-scroll" data-dept="csbs">
-          <div class="dept-icon"><img src="/logos/csbs.png" alt="CSBS" class="dept-logo" /></div>
+          <div class="dept-icon">
+            <div class="dept-badge dept-teal">
+              <div class="dept-svg-icon" id="dept-icon-csbs"></div><span>CSBS</span>
+            </div>
+          </div>
           <h3 class="dept-name">Computer Science and Business Systems (CSBS)</h3>
           <p class="dept-coordinator">Coordinator: Dr. E. Divya</p>
           <button class="dept-btn" data-dept="csbs">View Details</button>
         </div>
         <!-- ECE -->
         <div class="dept-card animate-on-scroll" data-dept="ece">
-          <div class="dept-icon"><img src="/logos/ece.png" alt="ECE" class="dept-logo" /></div>
+          <div class="dept-icon">
+            <div class="dept-badge dept-purple">
+              <div class="dept-svg-icon" id="dept-icon-ece"></div><span>ECE</span>
+            </div>
+          </div>
           <h3 class="dept-name">Electronics and Communication Engineering (ECE)</h3>
           <p class="dept-coordinator">Coordinator: Dr. S. R. Surem Samuel</p>
           <button class="dept-btn" data-dept="ece">View Details</button>
         </div>
         <!-- AIDS -->
         <div class="dept-card animate-on-scroll" data-dept="aids">
-          <div class="dept-icon"><img src="/logos/aids.png" alt="AIDS" class="dept-logo" /></div>
+          <div class="dept-icon">
+            <div class="dept-badge dept-orange">
+              <div class="dept-svg-icon" id="dept-icon-aids"></div><span>AIDS</span>
+            </div>
+          </div>
           <h3 class="dept-name">Artificial Intelligence and Data Science (AIDS)</h3>
-          <p class="dept-coordinator">Coordinator: Dr. J.P. Nivash Jeevanandham</p>
+          <p class="dept-coordinator">Coordinator: Dr. Nivash Jeevanandham</p>
           <button class="dept-btn" data-dept="aids">View Details</button>
         </div>
         <!-- IT -->
         <div class="dept-card animate-on-scroll" data-dept="it">
-          <div class="dept-icon"><img src="/logos/it.png" alt="IT" class="dept-logo" /></div>
+          <div class="dept-icon">
+            <div class="dept-badge dept-indigo">
+              <div class="dept-svg-icon" id="dept-icon-it"></div><span>IT</span>
+            </div>
+          </div>
           <h3 class="dept-name">Information Technology (IT)</h3>
           <p class="dept-coordinator">Coordinator: Dr. M. Vasumathy</p>
           <button class="dept-btn" data-dept="it">View Details</button>
         </div>
         <!-- MECH -->
         <div class="dept-card animate-on-scroll" data-dept="mech">
-          <div class="dept-icon"><img src="/logos/mech.png" alt="MECH" class="dept-logo" /></div>
+          <div class="dept-icon">
+            <div class="dept-badge dept-rose">
+              <div class="dept-svg-icon" id="dept-icon-mech"></div><span>MECH</span>
+            </div>
+          </div>
           <h3 class="dept-name">Mechanical Engineering (MECH)</h3>
           <p class="dept-coordinator">Coordinator: Mr. S. Rudramoorthy</p>
           <button class="dept-btn" data-dept="mech">View Details</button>
         </div>
         <!-- MBA -->
         <div class="dept-card animate-on-scroll" data-dept="mba">
-          <div class="dept-icon"><img src="/logos/mba.png" alt="MBA" class="dept-logo" /></div>
+          <div class="dept-icon">
+            <div class="dept-badge dept-amber">
+              <div class="dept-svg-icon" id="dept-icon-mba"></div><span>MBA</span>
+            </div>
+          </div>
           <h3 class="dept-name">Master of Business Administration (MBA)</h3>
           <p class="dept-coordinator">Coordinator: Mrs. M. Mavitha</p>
           <button class="dept-btn" data-dept="mba">View Details</button>
@@ -202,10 +274,6 @@
       <div class="modal-section">
         <h4>Staff Coordinator</h4>
         <p id="modalCoordinator"></p>
-      </div>
-      <div class="modal-section">
-        <h4>Head of Department</h4>
-        <p id="modalHOD"></p>
       </div>
       <a href="#registration" class="btn-primary btn-glow modal-register" id="modalRegister">Register for this
         Department</a>
@@ -235,7 +303,8 @@
               <ul>
                 <li><strong>Boys Teams:</strong> All male members (2–5 members)</li>
                 <li><strong>Girls Teams:</strong> All female members (2–5 members)</li>
-                <li><em>Note: No mixed-gender teams allowed. Teams must be exclusively boys or exclusively girls.</em>
+                <li class="team-note"><span class="note-highlight">⚠️ Note:</span> No mixed-gender teams allowed. Teams
+                  must be exclusively boys or exclusively girls.
                 </li>
               </ul>
             </div>
@@ -267,36 +336,141 @@
         <div class="prize-card prize-dept">
           <h3 class="prize-card-title cyan">Department Awards</h3>
           <p class="prize-card-desc">Top three projects from each department will receive:</p>
-          <div class="prize-list">
-            <div class="prize-item gold">
-              <span class="prize-medal">🥇</span>
-              <span>1st Place</span>
+          <div class="prize-podium">
+            <div class="podium-item podium-gold">
+              <div class="podium-trophy">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 8h24v4H20z" fill="#ffd700" opacity="0.8" />
+                  <path d="M22 12h20v16c0 8-4 14-10 16-6-2-10-8-10-16V12z" fill="url(#goldGrad1)" stroke="#ffd700"
+                    stroke-width="1.5" />
+                  <path d="M22 12h-8c0 8 4 14 8 14v-14z" fill="#ffd700" opacity="0.3" />
+                  <path d="M42 12h8c0 8-4 14-8 14v-14z" fill="#ffd700" opacity="0.3" />
+                  <rect x="28" y="44" width="8" height="6" rx="1" fill="#ffd700" />
+                  <rect x="24" y="50" width="16" height="4" rx="2" fill="#ffd700" />
+                  <text x="32" y="30" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="800">1</text>
+                  <defs>
+                    <linearGradient id="goldGrad1" x1="22" y1="12" x2="42" y2="44">
+                      <stop stop-color="#ffe066" />
+                      <stop offset="1" stop-color="#f59e0b" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="podium-label">Champion</div>
+              <div class="podium-rank">1st Place</div>
             </div>
-            <div class="prize-item silver">
-              <span class="prize-medal">🥈</span>
-              <span>2nd Place</span>
+            <div class="podium-item podium-silver">
+              <div class="podium-trophy">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 8h24v4H20z" fill="#c0c0c0" opacity="0.8" />
+                  <path d="M22 12h20v16c0 8-4 14-10 16-6-2-10-8-10-16V12z" fill="url(#silverGrad1)" stroke="#c0c0c0"
+                    stroke-width="1.5" />
+                  <path d="M22 12h-8c0 8 4 14 8 14v-14z" fill="#c0c0c0" opacity="0.3" />
+                  <path d="M42 12h8c0 8-4 14-8 14v-14z" fill="#c0c0c0" opacity="0.3" />
+                  <rect x="28" y="44" width="8" height="6" rx="1" fill="#c0c0c0" />
+                  <rect x="24" y="50" width="16" height="4" rx="2" fill="#c0c0c0" />
+                  <text x="32" y="30" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="800">2</text>
+                  <defs>
+                    <linearGradient id="silverGrad1" x1="22" y1="12" x2="42" y2="44">
+                      <stop stop-color="#e8e8e8" />
+                      <stop offset="1" stop-color="#a0a0a0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="podium-label">Runner Up</div>
+              <div class="podium-rank">2nd Place</div>
             </div>
-            <div class="prize-item bronze">
-              <span class="prize-medal">🥉</span>
-              <span>3rd Place</span>
+            <div class="podium-item podium-bronze">
+              <div class="podium-trophy">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 8h24v4H20z" fill="#cd7f32" opacity="0.8" />
+                  <path d="M22 12h20v16c0 8-4 14-10 16-6-2-10-8-10-16V12z" fill="url(#bronzeGrad1)" stroke="#cd7f32"
+                    stroke-width="1.5" />
+                  <path d="M22 12h-8c0 8 4 14 8 14v-14z" fill="#cd7f32" opacity="0.3" />
+                  <path d="M42 12h8c0 8-4 14-8 14v-14z" fill="#cd7f32" opacity="0.3" />
+                  <rect x="28" y="44" width="8" height="6" rx="1" fill="#cd7f32" />
+                  <rect x="24" y="50" width="16" height="4" rx="2" fill="#cd7f32" />
+                  <text x="32" y="30" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="800">3</text>
+                  <defs>
+                    <linearGradient id="bronzeGrad1" x1="22" y1="12" x2="42" y2="44">
+                      <stop stop-color="#e8a060" />
+                      <stop offset="1" stop-color="#b06020" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="podium-label">2nd Runner Up</div>
+              <div class="podium-rank">3rd Place</div>
             </div>
           </div>
         </div>
         <div class="prize-card prize-overall">
           <h3 class="prize-card-title purple">Overall Excellence Awards</h3>
           <p class="prize-card-desc">The most impactful projects across all departments will be recognized with:</p>
-          <div class="prize-list">
-            <div class="prize-item gold">
-              <span class="prize-medal">🏆</span>
-              <span>Overall 1st</span>
+          <div class="prize-podium">
+            <div class="podium-item podium-overall-gold">
+              <div class="podium-trophy podium-trophy-lg">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="26" r="18" fill="url(#oa1Grad)" stroke="#c084fc" stroke-width="1.5" />
+                  <circle cx="32" cy="26" r="12" fill="rgba(168,85,247,0.15)" stroke="#a855f7" stroke-width="1" />
+                  <path d="M32 14l4 7h8l-6 5 2 8-8-5-8 5 2-8-6-5h8z" fill="#ffd700" stroke="#f59e0b"
+                    stroke-width="0.5" />
+                  <rect x="26" y="44" width="12" height="4" rx="2" fill="#c084fc" />
+                  <rect x="22" y="48" width="20" height="5" rx="2.5" fill="#a855f7" />
+                  <path d="M24 53h16v3a2 2 0 01-2 2H26a2 2 0 01-2-2v-3z" fill="#8b5cf6" />
+                  <defs>
+                    <radialGradient id="oa1Grad" cx="32" cy="26" r="18">
+                      <stop stop-color="#c084fc" stop-opacity="0.3" />
+                      <stop offset="1" stop-color="#7c3aed" stop-opacity="0.1" />
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="podium-label">Innovator Supreme</div>
+              <div class="podium-rank">Overall 1st</div>
             </div>
-            <div class="prize-item silver">
-              <span class="prize-medal">🏆</span>
-              <span>Overall 2nd</span>
+            <div class="podium-item podium-overall-silver">
+              <div class="podium-trophy">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="26" r="16" fill="url(#oa2Grad)" stroke="#a78bfa" stroke-width="1.5" />
+                  <circle cx="32" cy="26" r="10" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="1" />
+                  <path d="M32 16l3 6h7l-5 4 2 7-7-4-7 4 2-7-5-4h7z" fill="#e2e8f0" stroke="#a78bfa"
+                    stroke-width="0.5" />
+                  <rect x="27" y="42" width="10" height="3" rx="1.5" fill="#a78bfa" />
+                  <rect x="24" y="45" width="16" height="4" rx="2" fill="#8b5cf6" />
+                  <path d="M26 49h12v2.5a2 2 0 01-2 2H28a2 2 0 01-2-2V49z" fill="#7c3aed" />
+                  <defs>
+                    <radialGradient id="oa2Grad" cx="32" cy="26" r="16">
+                      <stop stop-color="#a78bfa" stop-opacity="0.25" />
+                      <stop offset="1" stop-color="#6d28d9" stop-opacity="0.08" />
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="podium-label">Visionary</div>
+              <div class="podium-rank">Overall 2nd</div>
             </div>
-            <div class="prize-item bronze">
-              <span class="prize-medal">🏆</span>
-              <span>Overall 3rd</span>
+            <div class="podium-item podium-overall-bronze">
+              <div class="podium-trophy">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="26" r="14" fill="url(#oa3Grad)" stroke="#8b5cf6" stroke-width="1.5" />
+                  <circle cx="32" cy="26" r="9" fill="rgba(124,58,237,0.1)" stroke="#7c3aed" stroke-width="1" />
+                  <path d="M32 18l2.5 5h5.5l-4 3.5 1.5 5.5-5.5-3.5-5.5 3.5 1.5-5.5-4-3.5h5.5z" fill="#c4b5fd"
+                    stroke="#7c3aed" stroke-width="0.5" />
+                  <rect x="28" y="40" width="8" height="3" rx="1.5" fill="#8b5cf6" />
+                  <rect x="25" y="43" width="14" height="4" rx="2" fill="#7c3aed" />
+                  <path d="M27 47h10v2a2 2 0 01-2 2H29a2 2 0 01-2-2v-2z" fill="#6d28d9" />
+                  <defs>
+                    <radialGradient id="oa3Grad" cx="32" cy="26" r="14">
+                      <stop stop-color="#8b5cf6" stop-opacity="0.2" />
+                      <stop offset="1" stop-color="#5b21b6" stop-opacity="0.06" />
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="podium-label">Trailblazer</div>
+              <div class="podium-rank">Overall 3rd</div>
             </div>
           </div>
         </div>
@@ -457,42 +631,106 @@
       <p class="coord-subtitle animate-on-scroll">Meet our departmental project coordinators</p>
       <div class="coord-cards animate-on-scroll">
         <div class="coord-card">
-          <div class="coord-avatar">👤</div>
+          <div class="coord-avatar">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="8" fill="rgba(0,229,255,0.15)" stroke="#00e5ff" stroke-width="1.5" />
+              <path d="M12 42c0-6.627 5.373-12 12-12s12 5.373 12 12" fill="rgba(0,229,255,0.08)" stroke="#00e5ff"
+                stroke-width="1.5" />
+              <path d="M14 8l10-4 10 4-10 4-10-4z" fill="rgba(0,229,255,0.2)" stroke="#00e5ff" stroke-width="1" />
+              <path d="M14 8v6" stroke="#00e5ff" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </div>
           <h4 class="coord-name">Dr. A. Touseef Ahmed</h4>
           <span class="coord-dept">S&H</span>
         </div>
         <div class="coord-card">
-          <div class="coord-avatar">👤</div>
+          <div class="coord-avatar">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="8" fill="rgba(59,130,246,0.15)" stroke="#60a5fa" stroke-width="1.5" />
+              <path d="M12 42c0-6.627 5.373-12 12-12s12 5.373 12 12" fill="rgba(59,130,246,0.08)" stroke="#60a5fa"
+                stroke-width="1.5" />
+              <path d="M14 8l10-4 10 4-10 4-10-4z" fill="rgba(59,130,246,0.2)" stroke="#60a5fa" stroke-width="1" />
+              <path d="M14 8v6" stroke="#60a5fa" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </div>
           <h4 class="coord-name">Dr. Getsy S Sara</h4>
           <span class="coord-dept">CSE</span>
         </div>
         <div class="coord-card">
-          <div class="coord-avatar">👤</div>
+          <div class="coord-avatar">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="8" fill="rgba(139,92,246,0.15)" stroke="#a78bfa" stroke-width="1.5" />
+              <path d="M12 42c0-6.627 5.373-12 12-12s12 5.373 12 12" fill="rgba(139,92,246,0.08)" stroke="#a78bfa"
+                stroke-width="1.5" />
+              <path d="M14 8l10-4 10 4-10 4-10-4z" fill="rgba(139,92,246,0.2)" stroke="#a78bfa" stroke-width="1" />
+              <path d="M14 8v6" stroke="#a78bfa" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </div>
           <h4 class="coord-name">Dr. S. R. Surem Samuel</h4>
           <span class="coord-dept">ECE</span>
         </div>
         <div class="coord-card">
-          <div class="coord-avatar">👤</div>
-          <h4 class="coord-name">Dr. J.P. Nivash Jeevanandham</h4>
+          <div class="coord-avatar">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="8" fill="rgba(249,115,22,0.15)" stroke="#fb923c" stroke-width="1.5" />
+              <path d="M12 42c0-6.627 5.373-12 12-12s12 5.373 12 12" fill="rgba(249,115,22,0.08)" stroke="#fb923c"
+                stroke-width="1.5" />
+              <path d="M14 8l10-4 10 4-10 4-10-4z" fill="rgba(249,115,22,0.2)" stroke="#fb923c" stroke-width="1" />
+              <path d="M14 8v6" stroke="#fb923c" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h4 class="coord-name">Dr. Nivash Jeevanandham</h4>
           <span class="coord-dept">AIDS</span>
         </div>
         <div class="coord-card">
-          <div class="coord-avatar">👤</div>
+          <div class="coord-avatar">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="8" fill="rgba(99,102,241,0.15)" stroke="#818cf8" stroke-width="1.5" />
+              <path d="M12 42c0-6.627 5.373-12 12-12s12 5.373 12 12" fill="rgba(99,102,241,0.08)" stroke="#818cf8"
+                stroke-width="1.5" />
+              <path d="M14 8l10-4 10 4-10 4-10-4z" fill="rgba(99,102,241,0.2)" stroke="#818cf8" stroke-width="1" />
+              <path d="M14 8v6" stroke="#818cf8" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </div>
           <h4 class="coord-name">Dr. M. Vasumathy</h4>
           <span class="coord-dept">IT</span>
         </div>
         <div class="coord-card">
-          <div class="coord-avatar">👤</div>
+          <div class="coord-avatar">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="8" fill="rgba(20,184,166,0.15)" stroke="#2dd4bf" stroke-width="1.5" />
+              <path d="M12 42c0-6.627 5.373-12 12-12s12 5.373 12 12" fill="rgba(20,184,166,0.08)" stroke="#2dd4bf"
+                stroke-width="1.5" />
+              <path d="M14 8l10-4 10 4-10 4-10-4z" fill="rgba(20,184,166,0.2)" stroke="#2dd4bf" stroke-width="1" />
+              <path d="M14 8v6" stroke="#2dd4bf" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </div>
           <h4 class="coord-name">Dr. E. Divya</h4>
           <span class="coord-dept">CSBS</span>
         </div>
         <div class="coord-card">
-          <div class="coord-avatar">👤</div>
+          <div class="coord-avatar">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="8" fill="rgba(244,63,94,0.15)" stroke="#fb7185" stroke-width="1.5" />
+              <path d="M12 42c0-6.627 5.373-12 12-12s12 5.373 12 12" fill="rgba(244,63,94,0.08)" stroke="#fb7185"
+                stroke-width="1.5" />
+              <path d="M14 8l10-4 10 4-10 4-10-4z" fill="rgba(244,63,94,0.2)" stroke="#fb7185" stroke-width="1" />
+              <path d="M14 8v6" stroke="#fb7185" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </div>
           <h4 class="coord-name">Mr. S. Rudramoorthy</h4>
           <span class="coord-dept">MECH</span>
         </div>
         <div class="coord-card">
-          <div class="coord-avatar">👤</div>
+          <div class="coord-avatar">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="8" fill="rgba(245,158,11,0.15)" stroke="#fbbf24" stroke-width="1.5" />
+              <path d="M12 42c0-6.627 5.373-12 12-12s12 5.373 12 12" fill="rgba(245,158,11,0.08)" stroke="#fbbf24"
+                stroke-width="1.5" />
+              <path d="M14 8l10-4 10 4-10 4-10-4z" fill="rgba(245,158,11,0.2)" stroke="#fbbf24" stroke-width="1" />
+              <path d="M14 8v6" stroke="#fbbf24" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </div>
           <h4 class="coord-name">Mrs. M. Mavitha</h4>
           <span class="coord-dept">MBA</span>
         </div>
