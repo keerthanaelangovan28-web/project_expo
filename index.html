@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Expo 2026 — Showcase Innovation. Celebrate Creation.</title>
+  <meta name="description"
+    content="Project Expo 2026 is a premier showcase platform where innovative minds present their technical projects to industry experts and peers at Kingston Engineering College." />
+  <meta property="og:title" content="Project Expo 2026 — Showcase Innovation. Celebrate Creation." />
+  <meta property="og:description"
+    content="A premier showcase platform where innovative minds present their technical projects. Register now!" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">PROJECT EXPO <span class="logo-year">'26</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#departments" class="nav-link">Departments</a></li>
+        <li><a href="#prizes" class="nav-link">Prizes</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline</a></li>
+        <li><a href="#coordinators" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#registration" class="nav-cta">Register Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ MOBILE DRAWER ============ -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="drawer-links">
+      <li><a href="#hero" class="drawer-link">Home</a></li>
+      <li><a href="#about" class="drawer-link">About</a></li>
+      <li><a href="#departments" class="drawer-link">Departments</a></li>
+      <li><a href="#prizes" class="drawer-link">Prizes</a></li>
+      <li><a href="#timeline" class="drawer-link">Timeline</a></li>
+      <li><a href="#coordinators" class="drawer-link">Contact</a></li>
+      <li><a href="#registration" class="drawer-link cta">Register Now</a></li>
+    </ul>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section id="hero" class="hero">
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    <!-- Floating Cosmic Orbs -->
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-content animate-on-scroll">
+      <div class="hero-date-badge">
+        <span class="date-icon">📅</span>
+        <span>28th March 2026</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-project">PROJECT</span>
+        <span class="title-expo">EXPO </span><span class="title-year">2026</span>
+      </h1>
+      <p class="hero-tagline">Showcase Innovation. Celebrate Creation.</p>
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-days">00</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-hours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-minutes">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-seconds">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+      <p class="hero-desc">Project Expo 2026 is a premier showcase platform where innovative minds present their
+        technical projects to industry experts and peers.</p>
+      <p class="hero-desc-secondary">This college-level competition brings together the brightest students across all
+        departments to demonstrate their creativity, technical skill, and problem-solving abilities through hands-on
+        projects.</p>
+      <div class="hero-buttons">
+        <a href="#registration" class="btn-primary hero-cta">
+          <span>🚀</span> Register Now
+        </a>
+        <a href="#about" class="btn-outline">
+          Learn More ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title gradient-text animate-on-scroll">PROJECT EXPO</h2>
+      <div class="about-content animate-on-scroll">
+        <h3 class="about-headline">Where Innovation Meets Creativity.</h3>
+        <p class="about-text">The Project Expo is a platform for students to showcase their technical projects and
+          working prototypes across domains such as software, hardware, AI, and emerging technologies. Open to all
+          departments, the expo encourages participants to present ideas, demonstrate functionality, and share solutions
+          that address real-world challenges.</p>
+        <p class="about-tagline">Build. Exhibit. Inspire.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPARTMENTS SECTION ============ -->
+  <section id="departments" class="section departments">
+    <div class="container">
+      <h2 class="section-title gradient-text animate-on-scroll">DEPARTMENTS</h2>
+      <div class="dept-grid" id="deptGrid">
+        <!-- S&H -->
+        <div class="dept-card animate-on-scroll" data-dept="sh">
+          <div class="dept-icon"><img src="/logos/sh.png" alt="S&H" class="dept-logo" /></div>
+          <h3 class="dept-name">Science and Humanities (S&H)</h3>
+          <p class="dept-coordinator">Coordinator: Dr. A. Touseef Ahmed</p>
+          <button class="dept-btn" data-dept="sh">View Details</button>
+        </div>
+        <!-- CSE -->
+        <div class="dept-card animate-on-scroll" data-dept="cse">
+          <div class="dept-icon"><img src="/logos/cse.png" alt="CSE" class="dept-logo" /></div>
+          <h3 class="dept-name">Computer Science and Engineering (CSE)</h3>
+          <p class="dept-coordinator">Coordinator: Dr. Getsy S Sara</p>
+          <button class="dept-btn" data-dept="cse">View Details</button>
+        </div>
+        <!-- CSBS -->
+        <div class="dept-card animate-on-scroll" data-dept="csbs">
+          <div class="dept-icon"><img src="/logos/csbs.png" alt="CSBS" class="dept-logo" /></div>
+          <h3 class="dept-name">Computer Science and Business Systems (CSBS)</h3>
+          <p class="dept-coordinator">Coordinator: Dr. E. Divya</p>
+          <button class="dept-btn" data-dept="csbs">View Details</button>
+        </div>
+        <!-- ECE -->
+        <div class="dept-card animate-on-scroll" data-dept="ece">
+          <div class="dept-icon"><img src="/logos/ece.png" alt="ECE" class="dept-logo" /></div>
+          <h3 class="dept-name">Electronics and Communication Engineering (ECE)</h3>
+          <p class="dept-coordinator">Coordinator: Dr. S. R. Surem Samuel</p>
+          <button class="dept-btn" data-dept="ece">View Details</button>
+        </div>
+        <!-- AIDS -->
+        <div class="dept-card animate-on-scroll" data-dept="aids">
+          <div class="dept-icon"><img src="/logos/aids.png" alt="AIDS" class="dept-logo" /></div>
+          <h3 class="dept-name">Artificial Intelligence and Data Science (AIDS)</h3>
+          <p class="dept-coordinator">Coordinator: Dr. J.P. Nivash Jeevanandham</p>
+          <button class="dept-btn" data-dept="aids">View Details</button>
+        </div>
+        <!-- IT -->
+        <div class="dept-card animate-on-scroll" data-dept="it">
+          <div class="dept-icon"><img src="/logos/it.png" alt="IT" class="dept-logo" /></div>
+          <h3 class="dept-name">Information Technology (IT)</h3>
+          <p class="dept-coordinator">Coordinator: Dr. M. Vasumathy</p>
+          <button class="dept-btn" data-dept="it">View Details</button>
+        </div>
+        <!-- MECH -->
+        <div class="dept-card animate-on-scroll" data-dept="mech">
+          <div class="dept-icon"><img src="/logos/mech.png" alt="MECH" class="dept-logo" /></div>
+          <h3 class="dept-name">Mechanical Engineering (MECH)</h3>
+          <p class="dept-coordinator">Coordinator: Mr. S. Rudramoorthy</p>
+          <button class="dept-btn" data-dept="mech">View Details</button>
+        </div>
+        <!-- MBA -->
+        <div class="dept-card animate-on-scroll" data-dept="mba">
+          <div class="dept-icon"><img src="/logos/mba.png" alt="MBA" class="dept-logo" /></div>
+          <h3 class="dept-name">Master of Business Administration (MBA)</h3>
+          <p class="dept-coordinator">Coordinator: Mrs. M. Mavitha</p>
+          <button class="dept-btn" data-dept="mba">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPARTMENT MODAL ============ -->
+  <div class="modal-overlay" id="deptModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-section">
+        <h4>Domains</h4>
+        <ul class="modal-domains" id="modalDomains"></ul>
+      </div>
+      <div class="modal-section">
+        <h4>Staff Coordinator</h4>
+        <p id="modalCoordinator"></p>
+      </div>
+      <div class="modal-section">
+        <h4>Head of Department</h4>
+        <p id="modalHOD"></p>
+      </div>
+      <a href="#registration" class="btn-primary btn-glow modal-register" id="modalRegister">Register for this
+        Department</a>
+    </div>
+  </div>
+
+  <!-- ============ TEAM FORMATION SECTION ============ -->
+  <section id="team" class="section team-section">
+    <div class="container">
+      <h2 class="section-title gradient-text animate-on-scroll">TEAM FORMATION GUIDELINES</h2>
+      <div class="team-card animate-on-scroll">
+        <div class="team-card-header">
+          <span class="team-icon">👥</span>
+          <h3>Team Composition Rules</h3>
+        </div>
+        <div class="team-rules">
+          <div class="rule-item">
+            <span class="rule-icon">📏</span>
+            <div>
+              <strong>Team Size:</strong> Maximum 5 students per team
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-icon">⚧</span>
+            <div>
+              <strong>Gender Policy:</strong>
+              <ul>
+                <li><strong>Boys Teams:</strong> All male members (2–5 members)</li>
+                <li><strong>Girls Teams:</strong> All female members (2–5 members)</li>
+                <li><em>Note: No mixed-gender teams allowed. Teams must be exclusively boys or exclusively girls.</em>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-icon">📋</span>
+            <div>
+              <strong>Requirements:</strong>
+              <ul>
+                <li>Each team must have a <strong>Team Leader</strong></li>
+                <li>Team Leader will be the primary point of contact</li>
+                <li>All team members must be from the <strong>same department</strong></li>
+                <li>Cross-department teams are <strong>not permitted</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRIZES SECTION ============ -->
+  <section id="prizes" class="section prizes">
+    <div class="container">
+      <h2 class="section-title gradient-text animate-on-scroll">PRIZES & RECOGNITION</h2>
+      <p class="prizes-intro animate-on-scroll">Innovation deserves the spotlight. Outstanding projects will be honored
+        through both department-level and overall awards.</p>
+      <div class="prizes-grid animate-on-scroll">
+        <div class="prize-card prize-dept">
+          <h3 class="prize-card-title cyan">Department Awards</h3>
+          <p class="prize-card-desc">Top three projects from each department will receive:</p>
+          <div class="prize-list">
+            <div class="prize-item gold">
+              <span class="prize-medal">🥇</span>
+              <span>1st Place</span>
+            </div>
+            <div class="prize-item silver">
+              <span class="prize-medal">🥈</span>
+              <span>2nd Place</span>
+            </div>
+            <div class="prize-item bronze">
+              <span class="prize-medal">🥉</span>
+              <span>3rd Place</span>
+            </div>
+          </div>
+        </div>
+        <div class="prize-card prize-overall">
+          <h3 class="prize-card-title purple">Overall Excellence Awards</h3>
+          <p class="prize-card-desc">The most impactful projects across all departments will be recognized with:</p>
+          <div class="prize-list">
+            <div class="prize-item gold">
+              <span class="prize-medal">🏆</span>
+              <span>Overall 1st</span>
+            </div>
+            <div class="prize-item silver">
+              <span class="prize-medal">🏆</span>
+              <span>Overall 2nd</span>
+            </div>
+            <div class="prize-item bronze">
+              <span class="prize-medal">🏆</span>
+              <span>Overall 3rd</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="prizes-tagline animate-on-scroll">Create. Present. Get recognized.</p>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE SECTION ============ -->
+  <section id="timeline" class="section timeline-section">
+    <div class="container">
+      <h2 class="section-title gradient-text animate-on-scroll">IMPORTANT DATES</h2>
+      <div class="timeline">
+        <div class="timeline-item animate-on-scroll" data-status="active">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-badge open">Open Now</span>
+            <h3>Registration Opens</h3>
+            <p class="timeline-date">Immediate</p>
+            <p class="timeline-detail">Form your team and register through our website. Start building your prototype!
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-badge warning">Deadline</span>
+            <h3>Last Date for Registration</h3>
+            <p class="timeline-date">📅 March 4th, 2026</p>
+            <p class="timeline-detail">Hurry! Limited spots available. Don't miss your chance to participate.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-badge info">Submission</span>
+            <h3>Last Date to Submit Prototype & PPT</h3>
+            <p class="timeline-date">📅 March 11th, 2026</p>
+            <p class="timeline-detail">Upload your working prototype video and presentation before the deadline.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-node glow"></div>
+          <div class="timeline-content">
+            <span class="timeline-badge event">🌟 Main Event</span>
+            <h3>Project Expo Day!</h3>
+            <p class="timeline-date">📅 March 28th, 2026</p>
+            <p class="timeline-detail">The grand showcase event! Final presentation and evaluation day with judges and
+              live audience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REGISTRATION SECTION ============ -->
+  <section id="registration" class="section registration">
+    <div class="container">
+      <h2 class="section-title gradient-text animate-on-scroll">🚀 Register Your Team</h2>
+      <p class="reg-subtitle animate-on-scroll">Fill in your details below — Free registration · Deadline: March 4th</p>
+      <form class="reg-form animate-on-scroll" id="registrationForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="leaderName">Team Leader Name <span class="req">*</span></label>
+            <input type="text" id="leaderName" name="leaderName" placeholder="Enter team leader's full name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="leader@example.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="department">Department <span class="req">*</span></label>
+            <select id="department" name="department" required>
+              <option value="">Select Department</option>
+              <option value="S&H">S&H</option>
+              <option value="CSE">CSE</option>
+              <option value="AIDS">AIDS</option>
+              <option value="ECE">ECE</option>
+              <option value="IT">IT</option>
+              <option value="MBA">MBA</option>
+              <option value="MECH">MECH</option>
+              <option value="CSBS">CSBS</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="year">Year of Study <span class="req">*</span></label>
+            <select id="year" name="year" required>
+              <option value="">Select Year</option>
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year">2nd Year</option>
+              <option value="3rd Year">3rd Year</option>
+              <option value="4th Year">4th Year</option>
+              <option value="MBA">MBA</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="teamName">Team Name <span class="req">*</span></label>
+            <input type="text" id="teamName" name="teamName" placeholder="Enter your team name" required />
+          </div>
+          <div class="form-group">
+            <label for="projectTitle">Project Title <span class="req">*</span></label>
+            <input type="text" id="projectTitle" name="projectTitle" placeholder="Enter project title" required />
+          </div>
+        </div>
+        <div class="form-row full">
+          <div class="form-group full">
+            <label for="problemStatement">Problem Statement <span class="req">*</span></label>
+            <textarea id="problemStatement" name="problemStatement" rows="3"
+              placeholder="Describe the problem your project solves..." required></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="member2">Team Member 2 Name <span class="req">*</span></label>
+            <input type="text" id="member2" name="member2" placeholder="Member 2 full name" required />
+          </div>
+          <div class="form-group">
+            <label for="member3">Team Member 3 Name</label>
+            <input type="text" id="member3" name="member3" placeholder="Member 3 full name (optional)" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="member4">Team Member 4 Name</label>
+            <input type="text" id="member4" name="member4" placeholder="Member 4 full name (optional)" />
+          </div>
+          <div class="form-group">
+            <label for="member5">Team Member 5 Name</label>
+            <input type="text" id="member5" name="member5" placeholder="Member 5 full name (optional)" />
+          </div>
+        </div>
+        <button type="submit" class="btn-primary btn-glow btn-submit" id="submitBtn">
+          🚀 SUBMIT REGISTRATION
+        </button>
+        <p class="form-footer">Free registration · Max 5 members per team · Deadline: March 4th</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ SUCCESS MODAL ============ -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-card success-modal">
+      <div class="success-icon">✅</div>
+      <h3>Registration Successful!</h3>
+      <p>Your team has been registered for Project Expo 2026. Check your email for confirmation.</p>
+      <button class="btn-primary btn-glow" id="successClose">Back to Home</button>
+    </div>
+  </div>
+
+  <!-- ============ COORDINATORS SECTION ============ -->
+  <section id="coordinators" class="section coordinators">
+    <div class="container">
+      <h2 class="section-title gradient-text animate-on-scroll">COORDINATORS</h2>
+      <p class="coord-subtitle animate-on-scroll">Meet our departmental project coordinators</p>
+      <div class="coord-cards animate-on-scroll">
+        <div class="coord-card">
+          <div class="coord-avatar">👤</div>
+          <h4 class="coord-name">Dr. A. Touseef Ahmed</h4>
+          <span class="coord-dept">S&H</span>
+        </div>
+        <div class="coord-card">
+          <div class="coord-avatar">👤</div>
+          <h4 class="coord-name">Dr. Getsy S Sara</h4>
+          <span class="coord-dept">CSE</span>
+        </div>
+        <div class="coord-card">
+          <div class="coord-avatar">👤</div>
+          <h4 class="coord-name">Dr. S. R. Surem Samuel</h4>
+          <span class="coord-dept">ECE</span>
+        </div>
+        <div class="coord-card">
+          <div class="coord-avatar">👤</div>
+          <h4 class="coord-name">Dr. J.P. Nivash Jeevanandham</h4>
+          <span class="coord-dept">AIDS</span>
+        </div>
+        <div class="coord-card">
+          <div class="coord-avatar">👤</div>
+          <h4 class="coord-name">Dr. M. Vasumathy</h4>
+          <span class="coord-dept">IT</span>
+        </div>
+        <div class="coord-card">
+          <div class="coord-avatar">👤</div>
+          <h4 class="coord-name">Dr. E. Divya</h4>
+          <span class="coord-dept">CSBS</span>
+        </div>
+        <div class="coord-card">
+          <div class="coord-avatar">👤</div>
+          <h4 class="coord-name">Mr. S. Rudramoorthy</h4>
+          <span class="coord-dept">MECH</span>
+        </div>
+        <div class="coord-card">
+          <div class="coord-avatar">👤</div>
+          <h4 class="coord-name">Mrs. M. Mavitha</h4>
+          <span class="coord-dept">MBA</span>
+        </div>
+      </div>
+      <div class="coord-contact animate-on-scroll">
+        <p>📧 <a href="mailto:projexpo2026@gmail.com">projexpo2026@gmail.com</a></p>
+        <p>📍 Venue: Kingston Engineering College</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-authorities">
+        <h3 class="footer-heading">College Authorities</h3>
+        <div class="authority-list">
+          <div class="authority-item">
+            <span class="authority-icon">👑</span>
+            <div>
+              <span class="authority-title">Chairman</span>
+              <span class="authority-name">Thiru. D. M. Kathir Anand</span>
+              <span class="authority-org">Chairman, Kingston Engineering College</span>
+            </div>
+          </div>
+          <div class="authority-item">
+            <span class="authority-icon">👑</span>
+            <div>
+              <span class="authority-title">Chairwoman</span>
+              <span class="authority-name">Mrs. Sangeetha Kathir Anand</span>
+              <span class="authority-org">Chairwoman, Kingston Group of Institutions</span>
+            </div>
+          </div>
+          <div class="authority-item">
+            <span class="authority-icon">🎓</span>
+            <div>
+              <span class="authority-title">Principal</span>
+              <span class="authority-name">Dr. U. V. Arivazhagu</span>
+              <span class="authority-org">Principal</span>
+            </div>
+          </div>
+          <div class="authority-item">
+            <span class="authority-icon">📋</span>
+            <div>
+              <span class="authority-title">Staff Co-ordinator</span>
+              <span class="authority-name">Dr. Getsy S Sara</span>
+              <span class="authority-org">Kingston Engineering College</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kingston Engineering College. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
