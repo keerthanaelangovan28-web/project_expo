@@ -239,134 +239,233 @@ function initDeptModal() {
 
 // ========== REGISTRATION FORM ==========
 function initForm() {
-  const form = document.getElementById('registrationForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const successModal = document.getElementById('successModal');
-  const successClose = document.getElementById('successClose');
+  // ── DUAL GOOGLE SHEET CONFIG ──
+  // Replace these URLs after deploying your two separate Apps Scripts
+  const GOOGLE_SHEET_CONFIG = {
+    intra: {
+      name: 'Intra-Department',
+      scriptUrl: 'https://script.google.com/macros/s/AKfycbwXQUCT-iRdfXwq8GzuMifu21mK-8mNhlljGMp9YuMRfWSGzBMEVUbNdqCDHaUosCPa/exec'
+    },
+    techFusion: {
+      name: 'Tech Fusion',
+      scriptUrl: 'https://script.google.com/macros/s/AKfycbw-oAu8Qjs5803AYct4ETXH_-PzcZ3pyFaRSQeXWID5P8IzcpW_By-hDwJ8kzBUTEi9cA/exec'
+    }
+  };
 
-  // Registration deadline: March 4, 2026 11:59 PM IST (UTC+5:30)
   const DEADLINE = new Date('2026-03-04T23:59:00+05:30');
   const isExpired = () => new Date() > DEADLINE;
 
-  if (isExpired()) {
-    submitBtn.textContent = '🔒 REGISTRATION CLOSED';
-    submitBtn.classList.add('disabled');
-    submitBtn.disabled = true;
-    // Disable all form inputs
-    form.querySelectorAll('input, select, textarea').forEach(el => {
-      el.disabled = true;
-      el.style.opacity = '0.5';
-      el.style.cursor = 'not-allowed';
-    });
-    return; // Skip all event listeners
+  const catSelector = document.getElementById('regCategorySelector');
+  const intraWrap = document.getElementById('intraFormWrap');
+  const tfWrap = document.getElementById('techFusionFormWrap');
+  const intraForm = document.getElementById('intraForm');
+  const tfForm = document.getElementById('techFusionForm');
+  const intraSubmitBtn = document.getElementById('intraSubmitBtn');
+  const tfSubmitBtn = document.getElementById('tfSubmitBtn');
+  const successModal = document.getElementById('successModal');
+  const successClose = document.getElementById('successClose');
+  const successMessage = document.getElementById('successMessage');
+  const tfDeptError = document.getElementById('tfDeptError');
+
+  // ── Show category-specific form ──
+  function showForm(category) {
+    catSelector.style.display = 'none';
+    if (category === 'intra') {
+      intraWrap.style.display = 'block';
+      tfWrap.style.display = 'none';
+    } else {
+      tfWrap.style.display = 'block';
+      intraWrap.style.display = 'none';
+    }
   }
 
-  const requiredFields = ['leaderName', 'email', 'department', 'year', 'teamName', 'projectTitle', 'problemStatement', 'member2'];
+  function showSelector() {
+    catSelector.style.display = '';
+    intraWrap.style.display = 'none';
+    tfWrap.style.display = 'none';
+  }
 
-  function validateField(field) {
-    const el = document.getElementById(field);
+  // Category card clicks
+  catSelector.querySelectorAll('.reg-cat-card').forEach(card => {
+    card.addEventListener('click', () => showForm(card.dataset.category));
+  });
+
+  // Back buttons
+  document.getElementById('intraBackBtn').addEventListener('click', showSelector);
+  document.getElementById('techFusionBackBtn').addEventListener('click', showSelector);
+
+  // ── Nav/Drawer register links ──
+  document.querySelectorAll('[data-category]').forEach(el => {
+    if (el.classList.contains('reg-cat-card')) return; // skip category cards
+    el.addEventListener('click', (e) => {
+      const cat = el.dataset.category;
+      setTimeout(() => showForm(cat), 300);
+    });
+  });
+
+  // ── Field validation helper ──
+  function validateField(id) {
+    const el = document.getElementById(id);
+    if (!el) return true;
     let valid = true;
-
-    if (!el.value.trim()) {
-      valid = false;
+    if (!el.value.trim()) valid = false;
+    if (id.includes('email') && el.value.trim()) {
+      valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
     }
-
-    if (field === 'email' && el.value.trim()) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      valid = emailRegex.test(el.value.trim());
-    }
-
-    if (valid) {
-      el.classList.remove('error');
-    } else {
-      el.classList.add('error');
-    }
-
+    el.classList.toggle('error', !valid);
     return valid;
   }
 
-  // Real-time validation on blur
-  requiredFields.forEach(field => {
-    const el = document.getElementById(field);
-    el.addEventListener('blur', () => validateField(field));
-    el.addEventListener('input', () => {
-      if (el.classList.contains('error')) {
-        validateField(field);
-      }
+  // ── Disable forms if expired ──
+  if (isExpired()) {
+    [intraSubmitBtn, tfSubmitBtn].forEach(btn => {
+      btn.textContent = '🔒 REGISTRATION CLOSED';
+      btn.classList.add('disabled');
+      btn.disabled = true;
     });
-  });
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    // Validate all
-    let allValid = true;
-    requiredFields.forEach(field => {
-      if (!validateField(field)) allValid = false;
+    [intraForm, tfForm].forEach(f => {
+      f.querySelectorAll('input, select, textarea').forEach(el => {
+        el.disabled = true;
+        el.style.opacity = '0.5';
+        el.style.cursor = 'not-allowed';
+      });
     });
-
-    if (!allValid) return;
-
-    // Gather data
-    const formData = {
-      leaderName: document.getElementById('leaderName').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      department: document.getElementById('department').value,
-      year: document.getElementById('year').value,
-      teamName: document.getElementById('teamName').value.trim(),
-      projectTitle: document.getElementById('projectTitle').value.trim(),
-      problemStatement: document.getElementById('problemStatement').value.trim(),
-      member2: document.getElementById('member2').value.trim(),
-      member3: document.getElementById('member3').value.trim(),
-      member4: document.getElementById('member4').value.trim(),
-      member5: document.getElementById('member5').value.trim()
-    };
-
-    // Show loading state
-    submitBtn.classList.add('loading');
-    submitBtn.textContent = '⏳ Submitting...';
-
-    try {
-      // Send to Google Apps Script
-      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzkP6uOkYZCiSE3MA35AsoFlufzbxr6xCYwtuu9Zm-QOzUgaWrUoD2-i6qYkkHN1qiX/exec';
-
-      // Fire-and-forget with short timeout since no-cors gives opaque response anyway
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 3000);
-
-      fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-        signal: controller.signal
-      }).catch(() => { });
-
-      // Show success after a brief delay (data is already being sent)
-      setTimeout(() => {
-        clearTimeout(timeoutId);
-        showSuccess();
-      }, 800);
-    } catch (error) {
-      console.error('Submission error:', error);
-      alert('Something went wrong. Please try again.');
-      submitBtn.classList.remove('loading');
-      submitBtn.textContent = '🚀 SUBMIT REGISTRATION';
-    }
-  });
-
-  function showSuccess() {
-    submitBtn.classList.remove('loading');
-    submitBtn.textContent = '🚀 SUBMIT REGISTRATION';
-    form.reset();
-    successModal.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    return;
   }
 
+  // ── Intra-Department form ──
+  const intraRequired = ['intra-leaderName', 'intra-email', 'intra-department', 'intra-year', 'intra-teamName', 'intra-projectTitle', 'intra-problemStatement', 'intra-member2'];
+
+  intraRequired.forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener('blur', () => validateField(id));
+    el.addEventListener('input', () => { if (el.classList.contains('error')) validateField(id); });
+  });
+
+  intraForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let allValid = true;
+    intraRequired.forEach(id => { if (!validateField(id)) allValid = false; });
+    if (!allValid) return;
+
+    const g = id => document.getElementById(id).value.trim();
+    const formData = {
+      teamLeader: g('intra-leaderName'),
+      email: g('intra-email'),
+      department: g('intra-department'),
+      year: g('intra-year'),
+      teamName: g('intra-teamName'),
+      projectTitle: g('intra-projectTitle'),
+      problemStatement: g('intra-problemStatement'),
+      member2: g('intra-member2'),
+      member3: g('intra-member3'),
+      member4: g('intra-member4'),
+      member5: g('intra-member5')
+    };
+
+    intraSubmitBtn.classList.add('loading');
+    intraSubmitBtn.textContent = '⏳ Submitting...';
+    submitToSheet(GOOGLE_SHEET_CONFIG.intra.scriptUrl, formData, intraSubmitBtn, '🚀 Register Team', 'Intra-Department');
+  });
+
+  // ── Tech Fusion form ──
+  const tfRequired = ['tf-leaderName', 'tf-email', 'tf-department', 'tf-year', 'tf-teamName', 'tf-projectTitle', 'tf-problemStatement', 'tf-m2-name', 'tf-m2-dept', 'tf-m2-year'];
+
+  tfRequired.forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener('blur', () => validateField(id));
+    el.addEventListener('input', () => { if (el.classList.contains('error')) validateField(id); });
+  });
+
+  tfForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let allValid = true;
+    tfRequired.forEach(id => { if (!validateField(id)) allValid = false; });
+    if (!allValid) return;
+
+    // Multi-department validation
+    const g = id => document.getElementById(id).value.trim();
+    const depts = new Set([g('tf-department')]);
+    ['tf-m2-dept', 'tf-m3-dept', 'tf-m4-dept', 'tf-m5-dept'].forEach(id => {
+      const v = g(id);
+      if (v) depts.add(v);
+    });
+
+    if (depts.size < 2) {
+      tfDeptError.style.display = 'block';
+      return;
+    }
+    tfDeptError.style.display = 'none';
+
+    const formData = {
+      teamLeader: g('tf-leaderName'),
+      email: g('tf-email'),
+      leaderDept: g('tf-department'),
+      leaderYear: g('tf-year'),
+      teamName: g('tf-teamName'),
+      projectTitle: g('tf-projectTitle'),
+      problemStatement: g('tf-problemStatement'),
+      m2Name: g('tf-m2-name'), m2Dept: g('tf-m2-dept'), m2Year: g('tf-m2-year'),
+      m3Name: g('tf-m3-name'), m3Dept: g('tf-m3-dept'), m3Year: g('tf-m3-year'),
+      m4Name: g('tf-m4-name'), m4Dept: g('tf-m4-dept'), m4Year: g('tf-m4-year'),
+      m5Name: g('tf-m5-name'), m5Dept: g('tf-m5-dept'), m5Year: g('tf-m5-year')
+    };
+
+    tfSubmitBtn.classList.add('loading');
+    tfSubmitBtn.textContent = '⏳ Submitting...';
+    submitToSheet(GOOGLE_SHEET_CONFIG.techFusion.scriptUrl, formData, tfSubmitBtn, '⚡ Register Tech Fusion Team', 'Tech Fusion');
+  });
+
+  // ── Submit to Google Sheets ──
+  function submitToSheet(scriptUrl, formData, btn, originalText, categoryLabel) {
+    // Use hidden form + iframe for reliable Google Apps Script submission
+    const iframeName = 'hidden_iframe_' + Date.now();
+    const iframe = document.createElement('iframe');
+    iframe.name = iframeName;
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = scriptUrl;
+    form.target = iframeName;
+    form.style.display = 'none';
+
+    // Add all form data as hidden inputs
+    Object.keys(formData).forEach(key => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = formData[key];
+      form.appendChild(input);
+    });
+
+    document.body.appendChild(form);
+    form.submit();
+
+    // Clean up and show success
+    setTimeout(() => {
+      form.remove();
+      iframe.remove();
+      btn.classList.remove('loading');
+      btn.textContent = originalText;
+      if (categoryLabel === 'Intra-Department') {
+        intraForm.reset();
+      } else {
+        tfForm.reset();
+      }
+      successMessage.textContent = `Your ${categoryLabel} team has been registered for Project Expo 2026. Check your email for confirmation.`;
+      successModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }, 1500);
+  }
+
+  // ── Success modal ──
   successClose.addEventListener('click', () => {
     successModal.classList.remove('open');
     document.body.style.overflow = '';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    showSelector();
+    document.getElementById('registration').scrollIntoView({ behavior: 'smooth' });
   });
 
   successModal.addEventListener('click', (e) => {

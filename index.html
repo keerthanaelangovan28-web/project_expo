@@ -19,6 +19,16 @@
 </head>
 
 <body>
+  <!-- ============ COLLEGE HEADER BAR ============ -->
+  <div class="college-header" id="collegeHeader">
+    <div class="college-header-content">
+      <div class="college-text">
+        <span class="college-name">Kingston Engineering College</span>
+        <span class="college-status">&nbsp;(An Autonomous Institution)</span>
+      </div>
+    </div>
+  </div>
+
   <!-- ============ NAVBAR ============ -->
   <nav id="navbar" class="navbar">
     <div class="nav-container">
@@ -64,9 +74,22 @@
         <li><a href="#departments" class="nav-link">Departments</a></li>
         <li><a href="#prizes" class="nav-link">Prizes</a></li>
         <li><a href="#timeline" class="nav-link">Timeline</a></li>
+        <li><a href="#team" class="nav-link">Guidelines</a></li>
         <li><a href="#coordinators" class="nav-link">Contact</a></li>
       </ul>
-      <a href="#registration" class="nav-cta">Register Now</a>
+      <div class="nav-register-wrap">
+        <button class="nav-cta" id="registerDropdownBtn">Register ▾</button>
+        <div class="nav-register-dropdown" id="registerDropdown">
+          <a href="#registration" class="reg-dropdown-item" data-category="intra">
+            <span class="reg-dd-icon">🏢</span>
+            <span>Intra-Department</span>
+          </a>
+          <a href="#registration" class="reg-dropdown-item" data-category="techfusion">
+            <span class="reg-dd-icon">⚡</span>
+            <span>Tech Fusion (Inter)</span>
+          </a>
+        </div>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -81,8 +104,11 @@
       <li><a href="#departments" class="drawer-link">Departments</a></li>
       <li><a href="#prizes" class="drawer-link">Prizes</a></li>
       <li><a href="#timeline" class="drawer-link">Timeline</a></li>
+      <li><a href="#team" class="drawer-link">Guidelines</a></li>
       <li><a href="#coordinators" class="drawer-link">Contact</a></li>
-      <li><a href="#registration" class="drawer-link cta">Register Now</a></li>
+      <li><a href="#registration" class="drawer-link cta" data-category="intra">🏢 Register Intra-Dept</a></li>
+      <li><a href="#registration" class="drawer-link cta cta-green" data-category="techfusion">⚡ Register Tech
+          Fusion</a></li>
     </ul>
   </div>
   <div class="drawer-overlay" id="drawerOverlay"></div>
@@ -284,196 +310,159 @@
   <section id="team" class="section team-section">
     <div class="container">
       <h2 class="section-title gradient-text animate-on-scroll">TEAM FORMATION GUIDELINES</h2>
-      <div class="team-card animate-on-scroll">
-        <div class="team-card-header">
-          <span class="team-icon">👥</span>
-          <h3>Team Composition Rules</h3>
+      <p class="team-subtitle animate-on-scroll">Choose your track — compete within your department or collaborate
+        across boundaries</p>
+
+      <!-- Two Track Cards -->
+      <div class="team-tracks-grid animate-on-scroll">
+
+        <!-- Intra-Department Card -->
+        <div class="track-card track-cyan">
+          <div class="track-header">
+            <span class="track-icon">🏢</span>
+            <div>
+              <h3 class="track-title cyan">Intra-Department Teams</h3>
+              <span class="track-sub">All members from SAME department</span>
+            </div>
+          </div>
+          <ul class="track-rules">
+            <li>All team members must be from the <strong>SAME department</strong></li>
+            <li>Team Leader will be the primary point of contact</li>
+            <li>Compete for <strong>"Department Awards"</strong> (Champion, Runner Up, 2nd Runner Up)</li>
+            <li>Showcase your specialized domain expertise</li>
+          </ul>
+          <div class="track-eligibility cyan">
+            <span>✓</span> Register under Department Awards category
+          </div>
         </div>
-        <div class="team-rules">
-          <div class="rule-item">
-            <span class="rule-icon">📏</span>
+
+        <!-- Inter-Department Card -->
+        <div class="track-card track-green">
+          <div class="track-header">
+            <span class="track-icon">🔗</span>
             <div>
-              <strong>Team Size:</strong> Maximum 5 students per team
+              <h3 class="track-title green">Inter-Department Teams</h3>
+              <span class="track-sub">Tech Fusion Track</span>
             </div>
           </div>
-          <div class="rule-item">
-            <span class="rule-icon">⚧</span>
-            <div>
-              <strong>Gender Policy:</strong>
-              <ul>
-                <li><strong>Boys Teams:</strong> All male members (2–5 members)</li>
-                <li><strong>Girls Teams:</strong> All female members (2–5 members)</li>
-                <li class="team-note"><span class="note-highlight">⚠️ Note:</span> No mixed-gender teams allowed. Teams
-                  must be exclusively boys or exclusively girls.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="rule-item">
-            <span class="rule-icon">📋</span>
-            <div>
-              <strong>Requirements:</strong>
-              <ul>
-                <li>Each team must have a <strong>Team Leader</strong></li>
-                <li>Team Leader will be the primary point of contact</li>
-                <li>All team members must be from the <strong>same department</strong></li>
-                <li>Cross-department teams are <strong>not permitted</strong></li>
-              </ul>
-            </div>
+          <ul class="track-rules">
+            <li>Team members must be from <strong>DIFFERENT departments</strong></li>
+            <li>Team Leader will be the primary point of contact</li>
+            <li>Compete for <strong>"Tech Fusion Awards"</strong> (Champion, Runner Up, 2nd Runner Up)</li>
+            <li>Demonstrate interdisciplinary collaboration</li>
+          </ul>
+          <div class="track-eligibility green">
+            <span>✓</span> Register under Tech Fusion Awards category
           </div>
         </div>
       </div>
+
+      <!-- Dual Participation Banner -->
+      <div class="dual-rule-banner animate-on-scroll">
+        <div class="dual-rule-header">
+          <span class="dual-rule-zap">⚡</span>
+          <h3>IMPORTANT PARTICIPATION RULE</h3>
+        </div>
+        <p class="dual-rule-desc">Each student can participate in <strong>MAXIMUM TWO teams</strong>:</p>
+        <div class="dual-rule-items">
+          <div class="dual-rule-allowed">
+            <span class="dual-num cyan-num">1</span>
+            <span>ONE Intra-Department team</span>
+          </div>
+          <div class="dual-rule-allowed">
+            <span class="dual-num green-num">2</span>
+            <span>ONE Inter-Department team</span>
+          </div>
+        </div>
+        <div class="dual-rule-prohibited">
+          <p>❌ Students CANNOT join multiple teams within the same category</p>
+          <p>❌ Students CANNOT join two Intra-Department teams</p>
+          <p>❌ Students CANNOT join two Inter-Department teams</p>
+        </div>
+      </div>
+
+      <!-- General Requirements -->
+      <div class="general-req animate-on-scroll">
+        <div class="general-req-header">
+          <span>📋</span>
+          <h3>General Requirements</h3>
+        </div>
+        <ul class="general-req-list">
+          <li>Each team must have a <strong>Team Leader</strong></li>
+          <li>Team Leader will be the primary point of contact</li>
+          <li>Maximum <strong>5 students</strong> per team</li>
+          <li>Teams must declare their category (<strong>Intra</strong> OR <strong>Tech Fusion</strong>) during
+            registration</li>
+          <li>Teams cannot change category after registration deadline</li>
+          <li>All team members must be currently enrolled students</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
-  <!-- ============ PRIZES SECTION ============ -->
+
+
+  <!-- ============ AWARD CATEGORIES SECTION ============ -->
   <section id="prizes" class="section prizes">
     <div class="container">
-      <h2 class="section-title gradient-text animate-on-scroll">PRIZES & RECOGNITION</h2>
-      <p class="prizes-intro animate-on-scroll">Innovation deserves the spotlight. Outstanding projects will be honored
-        through both department-level and overall awards.</p>
-      <div class="prizes-grid animate-on-scroll">
-        <div class="prize-card prize-dept">
-          <h3 class="prize-card-title cyan">Department Awards</h3>
-          <p class="prize-card-desc">Top three projects from each department will receive:</p>
-          <div class="prize-podium">
-            <div class="podium-item podium-gold">
-              <div class="podium-trophy">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 8h24v4H20z" fill="#ffd700" opacity="0.8" />
-                  <path d="M22 12h20v16c0 8-4 14-10 16-6-2-10-8-10-16V12z" fill="url(#goldGrad1)" stroke="#ffd700"
-                    stroke-width="1.5" />
-                  <path d="M22 12h-8c0 8 4 14 8 14v-14z" fill="#ffd700" opacity="0.3" />
-                  <path d="M42 12h8c0 8-4 14-8 14v-14z" fill="#ffd700" opacity="0.3" />
-                  <rect x="28" y="44" width="8" height="6" rx="1" fill="#ffd700" />
-                  <rect x="24" y="50" width="16" height="4" rx="2" fill="#ffd700" />
-                  <text x="32" y="30" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="800">1</text>
-                  <defs>
-                    <linearGradient id="goldGrad1" x1="22" y1="12" x2="42" y2="44">
-                      <stop stop-color="#ffe066" />
-                      <stop offset="1" stop-color="#f59e0b" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-              <div class="podium-label">Champion</div>
-              <div class="podium-rank">1st Place</div>
+      <h2 class="section-title gradient-text animate-on-scroll">AWARD CATEGORIES</h2>
+      <p class="prizes-intro animate-on-scroll">Two distinct tracks to recognize excellence — compete within your
+        department or collaborate across departments</p>
+      <div class="awards-grid animate-on-scroll">
+
+        <!-- CARD 1: Intra-Department Awards -->
+        <div class="award-card award-cyan">
+          <h3 class="award-title cyan">Intra-Department Awards</h3>
+          <p class="award-subtitle">Excellence within your department</p>
+          <p class="award-desc">Teams composed entirely of students from the same department compete for departmental
+            honors. Showcase your specialized expertise against peers in your field.</p>
+
+          <div class="award-prizes">
+            <div class="medal-box">
+              <span class="medal">🥇</span>
+              <span class="medal-label">Champion</span>
+              <span class="medal-rank">1ST PLACE</span>
             </div>
-            <div class="podium-item podium-silver">
-              <div class="podium-trophy">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 8h24v4H20z" fill="#c0c0c0" opacity="0.8" />
-                  <path d="M22 12h20v16c0 8-4 14-10 16-6-2-10-8-10-16V12z" fill="url(#silverGrad1)" stroke="#c0c0c0"
-                    stroke-width="1.5" />
-                  <path d="M22 12h-8c0 8 4 14 8 14v-14z" fill="#c0c0c0" opacity="0.3" />
-                  <path d="M42 12h8c0 8-4 14-8 14v-14z" fill="#c0c0c0" opacity="0.3" />
-                  <rect x="28" y="44" width="8" height="6" rx="1" fill="#c0c0c0" />
-                  <rect x="24" y="50" width="16" height="4" rx="2" fill="#c0c0c0" />
-                  <text x="32" y="30" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="800">2</text>
-                  <defs>
-                    <linearGradient id="silverGrad1" x1="22" y1="12" x2="42" y2="44">
-                      <stop stop-color="#e8e8e8" />
-                      <stop offset="1" stop-color="#a0a0a0" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-              <div class="podium-label">Runner Up</div>
-              <div class="podium-rank">2nd Place</div>
+            <div class="medal-box">
+              <span class="medal">🥈</span>
+              <span class="medal-label">Runner Up</span>
+              <span class="medal-rank">2ND PLACE</span>
             </div>
-            <div class="podium-item podium-bronze">
-              <div class="podium-trophy">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 8h24v4H20z" fill="#cd7f32" opacity="0.8" />
-                  <path d="M22 12h20v16c0 8-4 14-10 16-6-2-10-8-10-16V12z" fill="url(#bronzeGrad1)" stroke="#cd7f32"
-                    stroke-width="1.5" />
-                  <path d="M22 12h-8c0 8 4 14 8 14v-14z" fill="#cd7f32" opacity="0.3" />
-                  <path d="M42 12h8c0 8-4 14-8 14v-14z" fill="#cd7f32" opacity="0.3" />
-                  <rect x="28" y="44" width="8" height="6" rx="1" fill="#cd7f32" />
-                  <rect x="24" y="50" width="16" height="4" rx="2" fill="#cd7f32" />
-                  <text x="32" y="30" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="800">3</text>
-                  <defs>
-                    <linearGradient id="bronzeGrad1" x1="22" y1="12" x2="42" y2="44">
-                      <stop stop-color="#e8a060" />
-                      <stop offset="1" stop-color="#b06020" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-              <div class="podium-label">2nd Runner Up</div>
-              <div class="podium-rank">3rd Place</div>
+            <div class="medal-box">
+              <span class="medal">🥉</span>
+              <span class="medal-label">2nd Runner</span>
+              <span class="medal-rank">3RD PLACE</span>
             </div>
           </div>
         </div>
-        <div class="prize-card prize-overall">
-          <h3 class="prize-card-title purple">Overall Excellence Awards</h3>
-          <p class="prize-card-desc">The most impactful projects across all departments will be recognized with:</p>
-          <div class="prize-podium">
-            <div class="podium-item podium-overall-gold">
-              <div class="podium-trophy podium-trophy-lg">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="32" cy="26" r="18" fill="url(#oa1Grad)" stroke="#c084fc" stroke-width="1.5" />
-                  <circle cx="32" cy="26" r="12" fill="rgba(168,85,247,0.15)" stroke="#a855f7" stroke-width="1" />
-                  <path d="M32 14l4 7h8l-6 5 2 8-8-5-8 5 2-8-6-5h8z" fill="#ffd700" stroke="#f59e0b"
-                    stroke-width="0.5" />
-                  <rect x="26" y="44" width="12" height="4" rx="2" fill="#c084fc" />
-                  <rect x="22" y="48" width="20" height="5" rx="2.5" fill="#a855f7" />
-                  <path d="M24 53h16v3a2 2 0 01-2 2H26a2 2 0 01-2-2v-3z" fill="#8b5cf6" />
-                  <defs>
-                    <radialGradient id="oa1Grad" cx="32" cy="26" r="18">
-                      <stop stop-color="#c084fc" stop-opacity="0.3" />
-                      <stop offset="1" stop-color="#7c3aed" stop-opacity="0.1" />
-                    </radialGradient>
-                  </defs>
-                </svg>
-              </div>
-              <div class="podium-label">Innovator Supreme</div>
-              <div class="podium-rank">Overall 1st</div>
+
+        <!-- CARD 2: Inter-Department Awards -->
+        <div class="award-card award-green">
+          <h3 class="award-title green">Tech Fusion Awards</h3>
+          <p class="award-subtitle">Collaboration across boundaries</p>
+          <p class="award-desc">Bring together diverse perspectives! Teams with members from multiple departments
+            compete to demonstrate the power of interdisciplinary innovation.</p>
+
+          <div class="award-prizes">
+            <div class="medal-box">
+              <span class="medal">🥇</span>
+              <span class="medal-label">Champion</span>
+              <span class="medal-rank">1ST PLACE</span>
             </div>
-            <div class="podium-item podium-overall-silver">
-              <div class="podium-trophy">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="32" cy="26" r="16" fill="url(#oa2Grad)" stroke="#a78bfa" stroke-width="1.5" />
-                  <circle cx="32" cy="26" r="10" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="1" />
-                  <path d="M32 16l3 6h7l-5 4 2 7-7-4-7 4 2-7-5-4h7z" fill="#e2e8f0" stroke="#a78bfa"
-                    stroke-width="0.5" />
-                  <rect x="27" y="42" width="10" height="3" rx="1.5" fill="#a78bfa" />
-                  <rect x="24" y="45" width="16" height="4" rx="2" fill="#8b5cf6" />
-                  <path d="M26 49h12v2.5a2 2 0 01-2 2H28a2 2 0 01-2-2V49z" fill="#7c3aed" />
-                  <defs>
-                    <radialGradient id="oa2Grad" cx="32" cy="26" r="16">
-                      <stop stop-color="#a78bfa" stop-opacity="0.25" />
-                      <stop offset="1" stop-color="#6d28d9" stop-opacity="0.08" />
-                    </radialGradient>
-                  </defs>
-                </svg>
-              </div>
-              <div class="podium-label">Visionary</div>
-              <div class="podium-rank">Overall 2nd</div>
+            <div class="medal-box">
+              <span class="medal">🥈</span>
+              <span class="medal-label">Runner Up</span>
+              <span class="medal-rank">2ND PLACE</span>
             </div>
-            <div class="podium-item podium-overall-bronze">
-              <div class="podium-trophy">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="32" cy="26" r="14" fill="url(#oa3Grad)" stroke="#8b5cf6" stroke-width="1.5" />
-                  <circle cx="32" cy="26" r="9" fill="rgba(124,58,237,0.1)" stroke="#7c3aed" stroke-width="1" />
-                  <path d="M32 18l2.5 5h5.5l-4 3.5 1.5 5.5-5.5-3.5-5.5 3.5 1.5-5.5-4-3.5h5.5z" fill="#c4b5fd"
-                    stroke="#7c3aed" stroke-width="0.5" />
-                  <rect x="28" y="40" width="8" height="3" rx="1.5" fill="#8b5cf6" />
-                  <rect x="25" y="43" width="14" height="4" rx="2" fill="#7c3aed" />
-                  <path d="M27 47h10v2a2 2 0 01-2 2H29a2 2 0 01-2-2v-2z" fill="#6d28d9" />
-                  <defs>
-                    <radialGradient id="oa3Grad" cx="32" cy="26" r="14">
-                      <stop stop-color="#8b5cf6" stop-opacity="0.2" />
-                      <stop offset="1" stop-color="#5b21b6" stop-opacity="0.06" />
-                    </radialGradient>
-                  </defs>
-                </svg>
-              </div>
-              <div class="podium-label">Trailblazer</div>
-              <div class="podium-rank">Overall 3rd</div>
+            <div class="medal-box">
+              <span class="medal">🥉</span>
+              <span class="medal-label">2nd Runner</span>
+              <span class="medal-rank">3RD PLACE</span>
             </div>
           </div>
         </div>
+
       </div>
       <p class="prizes-tagline animate-on-scroll">Create. Present. Get recognized.</p>
     </div>
@@ -530,87 +519,327 @@
   <section id="registration" class="section registration">
     <div class="container">
       <h2 class="section-title gradient-text animate-on-scroll">🚀 Register Your Team</h2>
-      <p class="reg-subtitle animate-on-scroll">Fill in your details below — Free registration · Deadline: March 4th</p>
-      <form class="reg-form animate-on-scroll" id="registrationForm" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="leaderName">Team Leader Name <span class="req">*</span></label>
-            <input type="text" id="leaderName" name="leaderName" placeholder="Enter team leader's full name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address <span class="req">*</span></label>
-            <input type="email" id="email" name="email" placeholder="leader@example.com" required />
+      <p class="reg-subtitle animate-on-scroll">Choose your registration track below — Free registration · Deadline:
+        March 4th</p>
+
+      <!-- ── CATEGORY SELECTOR ── -->
+      <div class="reg-category-selector animate-on-scroll" id="regCategorySelector">
+        <div class="reg-cat-card reg-cat-cyan" data-category="intra">
+          <span class="reg-cat-icon">🏢</span>
+          <h3>Intra-Department</h3>
+          <p>All members from the SAME department</p>
+        </div>
+        <div class="reg-cat-card reg-cat-green" data-category="techfusion">
+          <span class="reg-cat-icon">⚡</span>
+          <h3>Tech Fusion</h3>
+          <p>Members from DIFFERENT departments</p>
+        </div>
+      </div>
+
+      <!-- ── INTRA-DEPARTMENT FORM ── -->
+      <div class="reg-form-wrap" id="intraFormWrap" style="display:none;">
+        <button class="reg-back-btn" id="intraBackBtn">← Back to category selection</button>
+        <div class="reg-form-header cyan">
+          <span>🏢</span>
+          <div>
+            <h3>Intra-Department Registration</h3>
+            <p>All members must be from the SAME department</p>
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="department">Department <span class="req">*</span></label>
-            <select id="department" name="department" required>
-              <option value="">Select Department</option>
-              <option value="S&H">S&H</option>
-              <option value="CSE">CSE</option>
-              <option value="AIDS">AIDS</option>
-              <option value="ECE">ECE</option>
-              <option value="IT">IT</option>
-              <option value="MBA">MBA</option>
-              <option value="MECH">MECH</option>
-              <option value="CSBS">CSBS</option>
-            </select>
+        <form class="reg-form" id="intraForm" novalidate>
+          <input type="hidden" name="category" value="Intra-Department" />
+          <div class="form-section-label">Team Leader Details</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="intra-leaderName">Team Leader Name <span class="req">*</span></label>
+              <input type="text" id="intra-leaderName" name="leaderName" placeholder="Enter team leader's full name"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="intra-email">Email Address <span class="req">*</span></label>
+              <input type="email" id="intra-email" name="email" placeholder="leader@example.com" required />
+            </div>
           </div>
-          <div class="form-group">
-            <label for="year">Year of Study <span class="req">*</span></label>
-            <select id="year" name="year" required>
-              <option value="">Select Year</option>
-              <option value="1st Year">1st Year</option>
-              <option value="2nd Year">2nd Year</option>
-              <option value="3rd Year">3rd Year</option>
-              <option value="4th Year">4th Year</option>
-              <option value="MBA">MBA</option>
-            </select>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="intra-department">Department <span class="req">*</span></label>
+              <select id="intra-department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="S&H">S&H</option>
+                <option value="CSE">CSE</option>
+                <option value="AIDS">AIDS</option>
+                <option value="ECE">ECE</option>
+                <option value="IT">IT</option>
+                <option value="MBA">MBA</option>
+                <option value="MECH">MECH</option>
+                <option value="CSBS">CSBS</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="intra-year">Year of Study <span class="req">*</span></label>
+              <select id="intra-year" name="year" required>
+                <option value="">Select Year</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-section-label">Project Details</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="intra-teamName">Team Name <span class="req">*</span></label>
+              <input type="text" id="intra-teamName" name="teamName" placeholder="Enter your team name" required />
+            </div>
+            <div class="form-group">
+              <label for="intra-projectTitle">Project Title <span class="req">*</span></label>
+              <input type="text" id="intra-projectTitle" name="projectTitle" placeholder="Enter project title"
+                required />
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group full">
+              <label for="intra-problemStatement">Problem Statement <span class="req">*</span></label>
+              <textarea id="intra-problemStatement" name="problemStatement" rows="3"
+                placeholder="Describe the problem your project solves..." required></textarea>
+            </div>
+          </div>
+          <div class="form-section-label">Team Members</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="intra-member2">Team Member 2 <span class="req">*</span></label>
+              <input type="text" id="intra-member2" name="member2" placeholder="Member 2 full name" required />
+            </div>
+            <div class="form-group">
+              <label for="intra-member3">Team Member 3</label>
+              <input type="text" id="intra-member3" name="member3" placeholder="Member 3 (optional)" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="intra-member4">Team Member 4</label>
+              <input type="text" id="intra-member4" name="member4" placeholder="Member 4 (optional)" />
+            </div>
+            <div class="form-group">
+              <label for="intra-member5">Team Member 5</label>
+              <input type="text" id="intra-member5" name="member5" placeholder="Member 5 (optional)" />
+            </div>
+          </div>
+          <button type="submit" class="btn-primary btn-glow btn-submit" id="intraSubmitBtn">🚀 Register Team</button>
+          <p class="form-footer">Free registration · Max 5 members · Deadline: March 4th</p>
+        </form>
+      </div>
+
+      <!-- ── TECH FUSION FORM ── -->
+      <div class="reg-form-wrap" id="techFusionFormWrap" style="display:none;">
+        <button class="reg-back-btn" id="techFusionBackBtn">← Back to category selection</button>
+        <div class="reg-form-header green">
+          <span>⚡</span>
+          <div>
+            <h3>Tech Fusion Registration</h3>
+            <p>Cross-Department Collaboration · Members must be from DIFFERENT departments</p>
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="teamName">Team Name <span class="req">*</span></label>
-            <input type="text" id="teamName" name="teamName" placeholder="Enter your team name" required />
+        <form class="reg-form" id="techFusionForm" novalidate>
+          <input type="hidden" name="category" value="Tech Fusion" />
+          <div class="form-section-label">Team Leader Details</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="tf-leaderName">Team Leader Name <span class="req">*</span></label>
+              <input type="text" id="tf-leaderName" name="leaderName" placeholder="Enter team leader's full name"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="tf-email">Email Address <span class="req">*</span></label>
+              <input type="email" id="tf-email" name="email" placeholder="leader@example.com" required />
+            </div>
           </div>
-          <div class="form-group">
-            <label for="projectTitle">Project Title <span class="req">*</span></label>
-            <input type="text" id="projectTitle" name="projectTitle" placeholder="Enter project title" required />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="tf-department">Leader Department <span class="req">*</span></label>
+              <select id="tf-department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="S&H">S&H</option>
+                <option value="CSE">CSE</option>
+                <option value="AIDS">AIDS</option>
+                <option value="ECE">ECE</option>
+                <option value="IT">IT</option>
+                <option value="MBA">MBA</option>
+                <option value="MECH">MECH</option>
+                <option value="CSBS">CSBS</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tf-year">Leader Year <span class="req">*</span></label>
+              <select id="tf-year" name="year" required>
+                <option value="">Select Year</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="form-row full">
-          <div class="form-group full">
-            <label for="problemStatement">Problem Statement <span class="req">*</span></label>
-            <textarea id="problemStatement" name="problemStatement" rows="3"
-              placeholder="Describe the problem your project solves..." required></textarea>
+          <div class="form-section-label">Project Details</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="tf-teamName">Team Name <span class="req">*</span></label>
+              <input type="text" id="tf-teamName" name="teamName" placeholder="Enter your team name" required />
+            </div>
+            <div class="form-group">
+              <label for="tf-projectTitle">Project Title <span class="req">*</span></label>
+              <input type="text" id="tf-projectTitle" name="projectTitle" placeholder="Enter project title" required />
+            </div>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="member2">Team Member 2 Name <span class="req">*</span></label>
-            <input type="text" id="member2" name="member2" placeholder="Member 2 full name" required />
+          <div class="form-row full">
+            <div class="form-group full">
+              <label for="tf-problemStatement">Problem Statement <span class="req">*</span></label>
+              <textarea id="tf-problemStatement" name="problemStatement" rows="3"
+                placeholder="Describe the problem your project solves..." required></textarea>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="member3">Team Member 3 Name</label>
-            <input type="text" id="member3" name="member3" placeholder="Member 3 full name (optional)" />
+          <div class="form-section-label">Team Members <span class="form-section-note">(at least 2 different departments
+              required)</span></div>
+
+          <!-- Member 2 (Required) -->
+          <div class="tf-member-block">
+            <span class="tf-member-label">Member 2 <span class="req">*</span></span>
+            <div class="form-row form-row-3">
+              <div class="form-group">
+                <input type="text" id="tf-m2-name" name="m2Name" placeholder="Full name" required />
+              </div>
+              <div class="form-group">
+                <select id="tf-m2-dept" name="m2Dept" required>
+                  <option value="">Department</option>
+                  <option value="S&H">S&H</option>
+                  <option value="CSE">CSE</option>
+                  <option value="AIDS">AIDS</option>
+                  <option value="ECE">ECE</option>
+                  <option value="IT">IT</option>
+                  <option value="MBA">MBA</option>
+                  <option value="MECH">MECH</option>
+                  <option value="CSBS">CSBS</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select id="tf-m2-year" name="m2Year" required>
+                  <option value="">Year</option>
+                  <option value="1st Year">1st</option>
+                  <option value="2nd Year">2nd</option>
+                  <option value="3rd Year">3rd</option>
+                  <option value="4th Year">4th</option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="member4">Team Member 4 Name</label>
-            <input type="text" id="member4" name="member4" placeholder="Member 4 full name (optional)" />
+
+          <!-- Member 3 (Optional) -->
+          <div class="tf-member-block">
+            <span class="tf-member-label">Member 3</span>
+            <div class="form-row form-row-3">
+              <div class="form-group">
+                <input type="text" id="tf-m3-name" name="m3Name" placeholder="Full name (optional)" />
+              </div>
+              <div class="form-group">
+                <select id="tf-m3-dept" name="m3Dept">
+                  <option value="">Department</option>
+                  <option value="S&H">S&H</option>
+                  <option value="CSE">CSE</option>
+                  <option value="AIDS">AIDS</option>
+                  <option value="ECE">ECE</option>
+                  <option value="IT">IT</option>
+                  <option value="MBA">MBA</option>
+                  <option value="MECH">MECH</option>
+                  <option value="CSBS">CSBS</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select id="tf-m3-year" name="m3Year">
+                  <option value="">Year</option>
+                  <option value="1st Year">1st</option>
+                  <option value="2nd Year">2nd</option>
+                  <option value="3rd Year">3rd</option>
+                  <option value="4th Year">4th</option>
+                </select>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="member5">Team Member 5 Name</label>
-            <input type="text" id="member5" name="member5" placeholder="Member 5 full name (optional)" />
+
+          <!-- Member 4 (Optional) -->
+          <div class="tf-member-block">
+            <span class="tf-member-label">Member 4</span>
+            <div class="form-row form-row-3">
+              <div class="form-group">
+                <input type="text" id="tf-m4-name" name="m4Name" placeholder="Full name (optional)" />
+              </div>
+              <div class="form-group">
+                <select id="tf-m4-dept" name="m4Dept">
+                  <option value="">Department</option>
+                  <option value="S&H">S&H</option>
+                  <option value="CSE">CSE</option>
+                  <option value="AIDS">AIDS</option>
+                  <option value="ECE">ECE</option>
+                  <option value="IT">IT</option>
+                  <option value="MBA">MBA</option>
+                  <option value="MECH">MECH</option>
+                  <option value="CSBS">CSBS</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select id="tf-m4-year" name="m4Year">
+                  <option value="">Year</option>
+                  <option value="1st Year">1st</option>
+                  <option value="2nd Year">2nd</option>
+                  <option value="3rd Year">3rd</option>
+                  <option value="4th Year">4th</option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-        <button type="submit" class="btn-primary btn-glow btn-submit" id="submitBtn">
-          🚀 SUBMIT REGISTRATION
-        </button>
-        <p class="form-footer">Free registration · Max 5 members per team · Deadline: March 4th</p>
-      </form>
+
+          <!-- Member 5 (Optional) -->
+          <div class="tf-member-block">
+            <span class="tf-member-label">Member 5</span>
+            <div class="form-row form-row-3">
+              <div class="form-group">
+                <input type="text" id="tf-m5-name" name="m5Name" placeholder="Full name (optional)" />
+              </div>
+              <div class="form-group">
+                <select id="tf-m5-dept" name="m5Dept">
+                  <option value="">Department</option>
+                  <option value="S&H">S&H</option>
+                  <option value="CSE">CSE</option>
+                  <option value="AIDS">AIDS</option>
+                  <option value="ECE">ECE</option>
+                  <option value="IT">IT</option>
+                  <option value="MBA">MBA</option>
+                  <option value="MECH">MECH</option>
+                  <option value="CSBS">CSBS</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select id="tf-m5-year" name="m5Year">
+                  <option value="">Year</option>
+                  <option value="1st Year">1st</option>
+                  <option value="2nd Year">2nd</option>
+                  <option value="3rd Year">3rd</option>
+                  <option value="4th Year">4th</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="tf-dept-error" id="tfDeptError" style="display:none;">
+            ⚠️ Tech Fusion teams must represent at least 2 different departments
+          </div>
+
+          <button type="submit" class="btn-primary btn-glow btn-submit btn-green" id="tfSubmitBtn">⚡ Register Tech
+            Fusion Team</button>
+          <p class="form-footer">Free registration · Max 5 members · At least 2 departments required</p>
+        </form>
+      </div>
+
     </div>
   </section>
 
@@ -619,8 +848,8 @@
     <div class="modal-card success-modal">
       <div class="success-icon">✅</div>
       <h3>Registration Successful!</h3>
-      <p>Your team has been registered for Project Expo 2026. Check your email for confirmation.</p>
-      <button class="btn-primary btn-glow" id="successClose">Back to Home</button>
+      <p id="successMessage">Your team has been registered for Project Expo 2026. Check your email for confirmation.</p>
+      <button class="btn-primary btn-glow" id="successClose">Register Another Team</button>
     </div>
   </div>
 
