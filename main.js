@@ -5,7 +5,7 @@ const departments = {
     icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="20" r="8" stroke="#34d399" stroke-width="2.5" fill="rgba(16,185,129,0.15)"/><path d="M20 38c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"/><path d="M26 20l-6 16M38 20l6 16" stroke="#10b981" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="38" r="3" fill="#34d399"/><circle cx="44" cy="38" r="3" fill="#34d399"/><path d="M14 48h36" stroke="#10b981" stroke-width="2" stroke-linecap="round"/><path d="M32 38v10" stroke="#10b981" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="14" r="2" fill="#34d399"/></svg>`,
     abbr: 'S&H',
     colorClass: 'dept-green',
-    domains: ['SDG Goals', 'Web & App Development', 'Cyber Security', 'Robotics & Automation', 'Data Science', 'Open Innovation'],
+    domains: ['SDG Goals', 'Web & App Development', 'Cyber Security', 'Robotics & Automation', 'Data Science', 'Open Innovation', 'Applied Physics Innovation', 'Chemistry for Society', 'Ethics and Technology', 'Disaster Management and Social Resilience', 'Mathematics and Data Analytics', 'Communication & Language'],
     coordinator: 'Dr. A. Touseef Ahmed'
   },
   cse: {
@@ -13,7 +13,7 @@ const departments = {
     icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="12" width="48" height="32" rx="4" stroke="#60a5fa" stroke-width="2.5" fill="rgba(59,130,246,0.1)"/><rect x="14" y="18" width="36" height="20" rx="2" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1.5"/><path d="M22 26l6 4-6 4" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 34h8" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/><path d="M26 48h12" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/><path d="M32 44v4" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/></svg>`,
     abbr: 'CSE',
     colorClass: 'dept-blue',
-    domains: ['Data Science', 'Web & App Development', 'Cyber Security', 'Blockchain', 'SDG Goals', 'Open Innovation'],
+    domains: ['Data Science and Big Data', 'Web & App Development', 'Cyber Security and Ethical Hacking', 'Blockchain', 'SDG Goals', 'Open Innovation', 'Full Stack and Web Technology', 'Human Computer Interaction', 'Fintech', 'Health Tech', 'Ed Tech'],
     coordinator: 'Dr. Getsy S Sara'
   },
   csbs: {
@@ -29,7 +29,7 @@ const departments = {
     icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="6" stroke="#a78bfa" stroke-width="2.5" fill="rgba(139,92,246,0.15)"/><circle cx="32" cy="32" r="14" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="32" cy="32" r="22" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3 4" opacity="0.6"/><path d="M32 10v6M32 48v6M10 32h6M48 32h6" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="32" r="2" fill="#a78bfa"/><path d="M42 18l4-4M18 42l4-4M42 46l4 4M18 18l4 4" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round"/></svg>`,
     abbr: 'ECE',
     colorClass: 'dept-purple',
-    domains: ['IoT Systems', 'Embedded Systems', 'Robotics & Automation', 'Drone Technology'],
+    domains: ['Open Innovation', 'Business Analytics', 'Machine Learning', 'Network Security', 'Automation', 'Financial Modeling'],
     coordinator: 'Dr. S. R. Surem Samuel'
   },
   aids: {
@@ -37,7 +37,7 @@ const departments = {
     icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="22" r="10" stroke="#fb923c" stroke-width="2" fill="rgba(249,115,22,0.1)"/><path d="M26 22h12" stroke="#fb923c" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="19" r="1.5" fill="#fb923c"/><circle cx="36" cy="19" r="1.5" fill="#fb923c"/><path d="M28 25a4 4 0 008 0" stroke="#fb923c" stroke-width="1.5" stroke-linecap="round"/><path d="M20 36c0 0 4-4 12-4s12 4 12 4" stroke="#f97316" stroke-width="2" stroke-linecap="round"/><path d="M16 44h6l4-6 4 10 4-8 4 6 4-4h6" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="14" r="2" fill="rgba(249,115,22,0.4)"/><circle cx="46" cy="14" r="2" fill="rgba(249,115,22,0.4)"/><path d="M20 14h2M42 14h2" stroke="#f97316" stroke-width="1.5" stroke-linecap="round"/></svg>`,
     abbr: 'AIDS',
     colorClass: 'dept-orange',
-    domains: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Data Analytics', 'Open Innovation'],
+    domains: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Data Analytics', 'Open Innovation', 'Ethical AI', 'Responsible AI', 'Sentiment Analysis', 'LLM'],
     coordinator: 'Dr. Nivash Jeevanandham'
   },
   it: {
@@ -45,7 +45,7 @@ const departments = {
     icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="18" stroke="#818cf8" stroke-width="2" fill="rgba(99,102,241,0.08)"/><circle cx="32" cy="32" r="10" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="32" cy="32" r="3" fill="#818cf8"/><circle cx="32" cy="14" r="3" stroke="#818cf8" stroke-width="1.5" fill="rgba(99,102,241,0.2)"/><circle cx="50" cy="32" r="3" stroke="#818cf8" stroke-width="1.5" fill="rgba(99,102,241,0.2)"/><circle cx="14" cy="32" r="3" stroke="#818cf8" stroke-width="1.5" fill="rgba(99,102,241,0.2)"/><circle cx="32" cy="50" r="3" stroke="#818cf8" stroke-width="1.5" fill="rgba(99,102,241,0.2)"/><path d="M32 17v12M32 35v12M35 32h12M17 32h12" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/></svg>`,
     abbr: 'IT',
     colorClass: 'dept-indigo',
-    domains: ['Cloud Computing', 'Web Technologies', 'Mobile Applications', 'Network Security', 'DevOps', 'Open Innovation'],
+    domains: ['Cloud Computing', 'Web Technologies', 'Mobile Applications', 'Network Security', 'DevOps', 'Open Innovation', 'AI/ML'],
     coordinator: 'Dr. M. Vasumathy'
   },
   mech: {
@@ -53,7 +53,7 @@ const departments = {
     icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="12" stroke="#fb7185" stroke-width="2" fill="rgba(244,63,94,0.1)"/><circle cx="32" cy="32" r="5" stroke="#f43f5e" stroke-width="2" fill="rgba(244,63,94,0.15)"/><circle cx="32" cy="32" r="1.5" fill="#fb7185"/><path d="M32 20v-6M32 50v-6M20 32h-6M50 32h-6" stroke="#fb7185" stroke-width="3" stroke-linecap="round"/><path d="M23.5 23.5l-4-4M40.5 40.5l-4-4M40.5 23.5l4-4M23.5 40.5l-4 4" stroke="#fb7185" stroke-width="3" stroke-linecap="round"/></svg>`,
     abbr: 'MECH',
     colorClass: 'dept-rose',
-    domains: ['CAD/CAM', 'Renewable Energy', '3D Printing', 'Automation', 'Thermal Systems', 'Open Innovation'],
+    domains: ['Automobile', 'Manufacturing', 'Design', 'SDG Goals', 'Mechatronics', 'Open Innovation'],
     coordinator: 'Mr. S. Rudramoorthy'
   },
   mba: {
@@ -61,7 +61,7 @@ const departments = {
     icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 48L22 28L32 38L42 18L52 28" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 48L22 28L32 38L42 18L52 28" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3" filter="blur(4px)"/><circle cx="52" cy="28" r="3" fill="#fbbf24"/><circle cx="42" cy="18" r="3" fill="#fbbf24"/><circle cx="32" cy="38" r="3" fill="#fbbf24"/><circle cx="22" cy="28" r="3" fill="#fbbf24"/><circle cx="12" cy="48" r="3" fill="#fbbf24"/><path d="M42 18l8-6" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/><path d="M46 12h4v4" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     abbr: 'MBA',
     colorClass: 'dept-amber',
-    domains: ['Business Plan', 'Marketing Strategy', 'Financial Modeling', 'HR Analytics', 'Startup Pitch', 'Open Innovation'],
+    domains: ['Business Plan', 'Financial Modeling', 'HR Management', 'Startup Pitch'],
     coordinator: 'Mrs. M. Mavitha'
   }
 };
