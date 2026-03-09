@@ -252,7 +252,7 @@ function initForm() {
     }
   };
 
-  const DEADLINE = new Date('2026-03-07T23:59:00+05:30');
+  const DEADLINE = new Date('2026-03-11T23:59:00+05:30');
   const isExpired = () => new Date() > DEADLINE;
 
   const catSelector = document.getElementById('regCategorySelector');
