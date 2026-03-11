@@ -3010,6 +3010,28 @@ img {
   }
 }
 
+/* ========== PPT DOWNLOAD BUTTON ========== */
+.ppt-download-wrap {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-ppt-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 36px;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .btn-ppt-download {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+}
+
 /* ========== SCROLLBAR ========== */
 ::-webkit-scrollbar {
   width: 8px;
