@@ -928,6 +928,16 @@ img {
   padding: 16px 44px;
 }
 
+.hero-deadline-text {
+  margin-top: 20px;
+  font-size: 15px;
+  color: rgba(168, 130, 230, 0.8);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
 /* ========== SECTION DECORATIVE ORBS ========== */
 .section-orb {
   position: absolute;
